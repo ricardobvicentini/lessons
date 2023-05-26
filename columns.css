@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+.columns {
+    columns: 4 250px; /* A width é mantida com a responsividade, diminuindo o número de colunas se for preciso. */
+    column-rule: 2px solid grey; /* Divisões das colunas, como as bordas. */
+    column-gap: 2rem;
+}
+
+.columns > p {
+    margin-top: 0;
+}
+
+.columns > h2 {
+    margin-top: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    break-inside: avoid; /* Evita que o elemento se quebre entre duas colunas. */
+}
+
+.columns .quote { 
+    margin-top: 2rem; /* IMPORTANTE: A especificidade da classe .quote é inferior a .columns > p, onde a margin-top é 0.
+    Portanto é necessário indicar a classe .columns para sobrepujá-la. */
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    column-span: all; /* A propriedade column-span faz o elemento se espalhar pelas colunas, no caso 'todas'. */
+}
+
+.nowrap {
+    white-space: nowrap; /* Faz o elemento ficar unido e quebrar inteiro para a outra linha, no caso '- The Dude'. */
+}
