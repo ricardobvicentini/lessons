@@ -1,0 +1,65 @@
+@charset "UTF-8"
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    min-height: 200vh;
+}
+
+.outer-container {
+    border: 3px dashed #000;
+    width: 75vw;
+    height: 85vh;
+    margin: 40px auto;
+}
+
+.inner-container {
+    border: 2px solid #00f;
+    width: 40vw;
+    height: 50vh;
+    margin: 200px auto;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    color: #fff;
+    padding: 1rem;
+}
+
+.absolute {
+    background-color: #00f;
+    position: absolute; /* Absolute precisa de um 'parent' (position: relative) imediatamente acima. Caso não haja nenhum, o parente será o navegador (body). */
+    top: 20px;
+    left: 300px;
+    /* z-index: 1; */
+} 
+
+/* DICA: para 'remover' um elemento da tela, em vez de utilizar 'display: none' ou 'opacity', - o que prejudica a acessibilidade, fazendo com que o navegador não reconheça o elemento - utilizar 'position: absolute' e 'left: -10000px', por exemplo. */
+
+.relative {
+    background-color: #f00;
+    position: relative; /* Relative não precisa de um 'position' acima dele. Ele sempre se posicionará de acordo com seu 'parent' imediato. */
+    top: 0px;
+    left: 300px;
+}
+
+.fixed {
+    background-color: green;
+    position: fixed; /* Fixed não tem 'parent' a não ser o body. Ele fica fixo na posição determinada. */
+    top: 0;
+} /* IMPORTANTE: A ordem de sobreposição é a ordem das tags no html. O último fica em cima do anterior. Para alterar, usar 'z-index' (ver a classe 'absolute'). */
+
+.sticky {
+    background-color: #000;
+    position: sticky; /* Sticky faz o elemento 'grudar' no valor determinado em 'top' ou 'bottom' quando a página descer ou subir, porém, ele sumirá junto com seu 'parent' quando este sair da viewport (rolar para ver).*/
+    top: 10px;
+}
