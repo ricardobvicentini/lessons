@@ -2,6 +2,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+/* Essa propriedade faz com que a rolagem para a seção desejada seja suave ao clicar no link relacionado. */
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -20,4 +31,41 @@ section {
 
 .green {
     background-color: green;
+}
+
+header, footer {
+    color: #fff;
+    text-align: center;
+    height: 100px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    font-size: 5rem;
+}
+
+footer {
+    background-color: #000;
+    font-size: 3rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+} /* Position: fixed 'retira' o elemento do fluxo, portanto o bloco não ocupa a width total. Colocar 'width: 100% ou utilizar a declaração:
+    position: sticky;
+    bottom: 0; */
+
+a:visited {
+    color: #fff;
+}
+
+.social {
+    background-color: royalblue;
+    color: #fff;
+    font-size: inherit;
+    padding: 1rem;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    z-index: 1;
 }
