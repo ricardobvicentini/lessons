@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    height: 100vh;
+}
+
+.blue {
+    background-color: #00f;
+}
+
+.red {
+    background-color: #f00;
+}
+
+.green {
+    background-color: green;
+}
