@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 1rem;
+    text-align: right;
+    background-image: linear-gradient(to bottom, rgb(70, 68, 68), rgb(141, 138, 138));
+    margin: 0;
+}
+
+li {
+    display: inline-block;
+    margin-inline: 2rem; /* Aplica margin apenas às laterais */
+}
+
+li > a {
+    text-decoration: none;
+    color: #efefef;
+    transition: .2s ease-in-out;
+}
+
+li > a:hover, li > a:focus {
+    border-top: 5px solid #efefef;
+    border-bottom: 5px solid #efefef;
+    border-radius: 4px;
+}
+
+main {
+    background-color: aqua;
+    width: 50%; /* Diferença entre % e vw: a % refere-se ao espaço que o elemento tem disponível para ele, enquanto a vw disponibiliza toda a viewport. */
+}
+
+p {
+    background-color: grey;
+}
+
+.opposite {
+    background-color: #333;
+    color: aliceblue;
+    margin-top: 100px; /* Não é possível aplicar margin-top e bottom em elemento inline. O mesmo ocorre com height e width. */
+    padding: 2rem;
+}
+
+div {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inline-block {
+    display: inline-block;
+    background-color: #333;
+    color: aliceblue;
+    margin-top: 100px;
+    width: 300px;
+    height: 100px; /* Com o display: inline-block é possível aplicar as propriedades não permitidas no inline sem quebrar a linha. */
+}
